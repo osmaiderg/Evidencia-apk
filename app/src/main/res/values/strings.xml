@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Tienda App</string>
+
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+
+    <!-- NavigationDrawer vendedor -->
+    <string name="op_inicio_v">Inicio</string>
+    <string name="op_mitienda_v">Mi tienda</string>
+    <string name="op_resenia_v">Reseñas</string>
+    <string name="op_cerrar_sesion_v">Cerrar sesion</string>
+
+    <!-- NavigationDrawer cliente -->
+    <string name="op_inicio_c">Inicio</string>
+    <string name="op_mi_perfil_c">Mi perfil</string>
+    <string name="op_cerrar_sesion_c">Cerrar sesion</string>
+
+    <string name="op_mis_productos_v">Mis productos</string>
+    <string name="op_mis_pedidos_v">Pedidos</string>
+
+    <string name="txt_bienvenida">Bienvenido</string>
+
+    <!-- Registro de vendedor -->
+    <string name="txtRegistroV">Registro Vendedor</string>
+    <string name="edtxtNombresV">Nombres completos</string>
+    <string name="edtxtEmailV">Email</string>
+    <string name="edtxtPasswordV">Password</string>
+    <string name="edtxtCPasswordV">Confirmar password</string>
+    <string name="btnRegistrarV">Registrarme</string>
+
+    <!-- Login de vendedor -->
+    <string name="txtLoginV">Login vendedor</string>
+    <string name="btnLoginV">Ingresar</string>
+    <string name="txtNoCuenta">¿No tienes una cuenta?</string>
+    <string name="txtRegistrarV">Registrarme</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum"></string>
+
+
+</resources>
