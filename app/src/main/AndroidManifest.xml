@@ -15,6 +15,12 @@
         android:theme="@style/Theme.TiendaApp"
         tools:targetApi="31">
         <activity
+            android:name=".Cliente.LoginClienteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Cliente.RegistroClienteActivity"
+            android:exported="false" />
+        <activity
             android:name=".Vendedor.LoginVendedorActivity"
             android:exported="false" />
         <activity

@@ -11,22 +11,35 @@
     <string name="op_cerrar_sesion_v">Cerrar sesion</string>
 
     <!-- NavigationDrawer cliente -->
-    <string name="op_inicio_c">Inicio</string>
+    <string name="op_inicio_c">InicioC</string>
     <string name="op_mi_perfil_c">Mi perfil</string>
     <string name="op_cerrar_sesion_c">Cerrar sesion</string>
 
+
+    <!-- Botton navigation Bar vendedor -->
     <string name="op_mis_productos_v">Mis productos</string>
     <string name="op_mis_pedidos_v">Pedidos</string>
+
+    <!-- Botton navigation Bar cliente -->
+    <string name="op_tienda_c">Tienda</string>
+    <string name="op_mis_pedidos_c">Mis Pedidos</string>
+
 
     <string name="txt_bienvenida">Bienvenido</string>
 
     <!-- Registro de vendedor -->
     <string name="txtRegistroV">Registro Vendedor</string>
     <string name="edtxtNombresV">Nombres completos</string>
-    <string name="edtxtEmailV">Email</string>
-    <string name="edtxtPasswordV">Password</string>
-    <string name="edtxtCPasswordV">Confirmar password</string>
+    <string name="edtxtEmail">Email</string>
+    <string name="edtxtPassword">Password</string>
+    <string name="edtxtCPassword">Confirmar password</string>
     <string name="btnRegistrarV">Registrarme</string>
+
+    <!-- Registro de clientes -->
+    <string name="txtRegistroC">Registro Cciente</string>
+    <string name="edtxtNombresC">Nombres completos</string>
+    <string name="btnRegistrarC">Registrarme</string>
+
 
     <!-- Login de vendedor -->
     <string name="txtLoginV">Login vendedor</string>
@@ -34,6 +47,10 @@
     <string name="txtNoCuenta">¿No tienes una cuenta?</string>
     <string name="txtRegistrarV">Registrarme</string>
 
+    <!-- Login de cliente -->
+    <string name="txtLoginC">Login cliente</string>
+    <string name="btnLoginc">Ingresar</string>
+    <string name="txtRegistrarC">Registrarme</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

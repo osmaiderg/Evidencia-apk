@@ -1,46 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fitsSystemWindows="true"
-    tools:context=".Vendedor.RegistroVendedorActivity">
-    
+    tools:context=".Cliente.RegistroClienteActivity">
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="15dp">
-
+        
         <TextView
-            android:text="@string/txtRegistroV"
+            android:text="@string/txtRegistroC"
+            android:layout_gravity="center"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        
-        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+
+            android:src="@drawable/registro_cliente"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/registro_vendedor"
+            android:layout_marginEnd="10dp"
             android:layout_width="80dp"
-            android:layout_height="80dp"/>
+            android:layout_height="80dp"
+            />
 
-
-        <!--Nombres completos-->
+        <!--Nombres-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/edtxtNombresV"
-                android:hint="@string/edtxtNombresV"
+                android:id="@+id/edtxtNombresC"
+                android:hint="@string/edtxtNombresC"
                 android:drawableStart="@drawable/icon_nombres"
-                android:inputType="textPersonName|textCapWords"
                 android:drawablePadding="5dp"
+                android:inputType="textPersonName|textCapWords"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -49,7 +51,7 @@
         <!--Email-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/edtxtEmail"
@@ -65,7 +67,7 @@
         <!--Password-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
 
             <EditText
@@ -79,10 +81,10 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Confirmar Password-->
+        <!--Confirmar password-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
 
             <EditText
@@ -96,18 +98,17 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Btn registrarme-->
+        <!--Boton registrar cliente-->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRegistrarV"
-            android:text="@string/btnRegistrarV"
-            app:cornerRadius="8dp"
+            android:id="@+id/btnRegistrarC"
+            android:text="@string/btnRegistrarC"
             android:textAllCaps="true"
-            android:layout_marginTop="15dp"
+            app:cornerRadius="8dp"
+            android:layout_marginEnd="15dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-
+            android:layout_height="wrap_content"
+            />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

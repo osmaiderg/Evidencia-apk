@@ -47,31 +47,31 @@ class RegistroVendedorActivity : AppCompatActivity() {
     private var cpassword = ""
     private fun validarInformacion() {
         nombres = binding.edtxtNombresV.text.toString().trim()
-        email = binding.edtxtEmailV.text.toString().trim()
-        password = binding.edtxtPasswordV.text.toString().trim()
-        cpassword = binding.edtxtCPasswordV.text.toString().trim()
+        email = binding.edtxtEmail.text.toString().trim()
+        password = binding.edtxtPassword.text.toString().trim()
+        cpassword = binding.edtxtCPassword.text.toString().trim()
 
         if(nombres.isEmpty()){
             binding.edtxtNombresV.error = "Ingrese sus nombres"
             binding.edtxtNombresV.requestFocus()
         }else if(email.isEmpty()){
-            binding.edtxtEmailV.error = "ingrese su email"
-            binding.edtxtEmailV.requestFocus()
+            binding.edtxtEmail.error = "ingrese su email"
+            binding.edtxtEmail.requestFocus()
         }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            binding.edtxtEmailV.error = "Email no valido"
-            binding.edtxtEmailV.requestFocus()
+            binding.edtxtEmail.error = "Email no valido"
+            binding.edtxtEmail.requestFocus()
         }else if(password.isEmpty()){
-            binding.edtxtPasswordV.error = "Ingrese Password"
-            binding.edtxtPasswordV.requestFocus()
+            binding.edtxtPassword.error = "Ingrese Password"
+            binding.edtxtPassword.requestFocus()
         }else if(password.length < 6){
-            binding.edtxtPasswordV.error = "Necesita 6 o mas caracteres"
-            binding.edtxtPasswordV.requestFocus()
+            binding.edtxtPassword.error = "Necesita 6 o mas caracteres"
+            binding.edtxtPassword.requestFocus()
         }else if (cpassword.isEmpty()){
-            binding.edtxtCPasswordV.error = "confirmar Password"
-            binding.edtxtCPasswordV.requestFocus()
+            binding.edtxtCPassword.error = "confirmar Password"
+            binding.edtxtCPassword.requestFocus()
         }else if(password!=cpassword){
-            binding.edtxtCPasswordV.error = "No coinciden"
-            binding.edtxtCPasswordV.requestFocus()
+            binding.edtxtCPassword.error = "No coinciden"
+            binding.edtxtCPassword.requestFocus()
         }else{
             registrarVendedor()
         }
