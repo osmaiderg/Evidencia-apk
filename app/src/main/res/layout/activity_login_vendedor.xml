@@ -39,7 +39,7 @@
                 android:id="@+id/edtxtEmailV"
                 android:drawableStart="@drawable/icon_email"
                 android:drawablePadding="10dp"
-                android:hint="@string/edtxtEmailV"
+                android:hint="@string/edtxtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -53,7 +53,7 @@
 
             <EditText
                 android:id="@+id/edtxtPasswordV"
-                android:hint="@string/edtxtPasswordV"
+                android:hint="@string/edtxtPassword"
                 android:drawableStart="@drawable/icon_password"
                 android:drawablePadding="10dp"
                 android:inputType="textPassword"

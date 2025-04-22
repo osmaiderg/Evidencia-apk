@@ -4,6 +4,9 @@
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
 
+    <string name="tipoVendedor">Vendedor</string>
+    <string name="tipoCliente">Cliente</string>
+
     <!-- NavigationDrawer vendedor -->
     <string name="op_inicio_v">Inicio</string>
     <string name="op_mitienda_v">Mi tienda</string>
