@@ -1,5 +1,6 @@
 package com.evidencia.tiendaapp.Cliente
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.Touch
 import android.view.MenuItem
@@ -15,13 +16,16 @@ import com.evidencia.tiendaapp.Cliente.Nav_Fragments_Cliente.FragmentInicioClien
 import com.evidencia.tiendaapp.Cliente.Nav_Fragments_Cliente.FragmentMiPerfilCliente
 
 import com.evidencia.tiendaapp.R
+import com.evidencia.tiendaapp.SeleccionarTipoActivity
 import com.evidencia.tiendaapp.databinding.ActivityMainClienteBinding
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 
 class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainClienteBinding
+    private var firebaseAuth : FirebaseAuth?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +35,9 @@ class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationIte
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        comprobarSesion()
 
         binding.navigationView.setNavigationItemSelectedListener(this)
 
@@ -46,6 +53,22 @@ class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationIte
         toggle.syncState()
 
         replaceFragment(FragmentInicioCliente())
+    }
+
+    private fun comprobarSesion(){
+        if (firebaseAuth!!.currentUser==null){
+            startActivity(Intent(this@MainActivityCliente, SeleccionarTipoActivity::class.java))
+            finishAffinity()
+        }else{
+            Toast.makeText(this, "Usuario en linea", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun cerrarSesion(){
+        firebaseAuth!!.signOut()
+        startActivity(Intent(this@MainActivityCliente, SeleccionarTipoActivity::class.java))
+        finishAffinity()
+        Toast.makeText(this, "Cerraste sesion", Toast.LENGTH_SHORT).show()
     }
 
     private fun replaceFragment(fragment: Fragment) {
@@ -65,7 +88,7 @@ class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationIte
                 replaceFragment(FragmentMiPerfilCliente())
             }
             R.id.op_cerrar_sesion_c->{
-                Toast.makeText(applicationContext, "Has cerrado sesion", Toast.LENGTH_SHORT).show()
+                cerrarSesion()
             }
             R.id.op_tienda_c->{
                 replaceFragment(FragmentTiendaCliente())
