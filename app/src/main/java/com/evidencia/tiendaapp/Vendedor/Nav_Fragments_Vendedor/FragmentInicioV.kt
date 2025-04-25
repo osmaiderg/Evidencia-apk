@@ -1,6 +1,7 @@
 package com.evidencia.tiendaapp.Vendedor.Nav_Fragments_Vendedor
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.widget.Toast
 import com.evidencia.tiendaapp.R
 import com.evidencia.tiendaapp.Vendedor.Botton_nav_Fragments_Vendedor.FragmentMisProductosV
 import com.evidencia.tiendaapp.Vendedor.Botton_nav_Fragments_Vendedor.FragmentPedidosV
+import com.evidencia.tiendaapp.Vendedor.Productos.AgregarProductoActivity
 import com.evidencia.tiendaapp.databinding.FragmentInicioVBinding
 
 class FragmentInicioV : Fragment() {
@@ -42,12 +44,7 @@ class FragmentInicioV : Fragment() {
 
 
         binding.addFab.setOnClickListener{
-
-            Toast.makeText(
-                mContext,
-                "Has presionado en boton flotante",
-                Toast.LENGTH_SHORT
-            ).show()
+            startActivity(Intent(context, AgregarProductoActivity::class.java ))
         }
 
         return binding.root

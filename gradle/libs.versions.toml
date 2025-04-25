@@ -15,6 +15,7 @@ navigationFragmentKtx = "2.8.9"
 navigationUiKtx = "2.8.9"
 firebaseAuthV = "22.3.1"
 firebaseDatabaseV = "20.3.1"
+imagePickerV = "2.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,6 +31,7 @@ androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navi
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 firebaseAuth = {group = "com.google.firebase", name = "firebase-auth", version.ref =  "firebaseAuthV"}
 firebaseDatabase = {group = "com.google.firebase", name = "firebase-database", version.ref =  "firebaseDatabaseV"}
+imagePicker = {group = "com.github.dhaval2404", name = "imagepicker", version.ref = "imagePickerV"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

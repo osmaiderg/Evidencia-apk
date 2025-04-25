@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.firebaseDatabase)/*Base de datos firebase*/
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.imagePicker)/*Nos permite recortar una imagen*/
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
