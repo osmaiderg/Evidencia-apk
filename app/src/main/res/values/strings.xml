@@ -10,6 +10,7 @@
     <!-- NavigationDrawer vendedor -->
     <string name="op_inicio_v">Inicio</string>
     <string name="op_mitienda_v">Mi tienda</string>
+    <string name="op_categorias_v">Categorias</string>
     <string name="op_resenia_v">Reseñas</string>
     <string name="op_cerrar_sesion_v">Cerrar sesion</string>
 
@@ -65,6 +66,10 @@
     <string name="edtxtPrecioConDescuentoP">Precio con descuento aplicado</string>
     <string name="edtxtNotaDescuentoP">Ejm: 10% Desc.</string>
     <string name="btnAgregarProducto">Agregar producto</string>
+
+    <!-- Productos -->
+    <string name="txtCategoria">Ingrese categoria</string>
+    <string name="btnAgregarCat">Agregar categoria </string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

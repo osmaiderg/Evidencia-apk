@@ -15,6 +15,7 @@ import com.evidencia.tiendaapp.R
 import com.evidencia.tiendaapp.SeleccionarTipoActivity
 import com.evidencia.tiendaapp.Vendedor.Botton_nav_Fragments_Vendedor.FragmentMisProductosV
 import com.evidencia.tiendaapp.Vendedor.Botton_nav_Fragments_Vendedor.FragmentPedidosV
+import com.evidencia.tiendaapp.Vendedor.Nav_Fragments_Vendedor.FragmentCategoriasV
 import com.evidencia.tiendaapp.Vendedor.Nav_Fragments_Vendedor.FragmentInicioV
 import com.evidencia.tiendaapp.Vendedor.Nav_Fragments_Vendedor.FragmentMiTiendaV
 import com.evidencia.tiendaapp.Vendedor.Nav_Fragments_Vendedor.FragmentReseniasV
@@ -87,6 +88,9 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
             }
             R.id.op_mitienda_v->{
                 replaceFragment(FragmentMiTiendaV())
+            }
+            R.id.op_categorias_v->{
+                replaceFragment(FragmentCategoriasV())
             }
             R.id.op_resenia_v->{
                 replaceFragment(FragmentReseniasV())
