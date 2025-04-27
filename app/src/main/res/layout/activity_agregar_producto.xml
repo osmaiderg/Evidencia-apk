@@ -98,10 +98,25 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <!--Categoria-->
+            <TextView
+                android:id="@+id/categoria"
+                android:text="@string/categoria"
+                android:padding="15dp"
+                android:textSize="17sp"
+                android:layout_marginTop="5dp"
+                app:drawableEndCompat="@drawable/icon_abajo"
+                android:gravity="center_vertical"
+                android:background="@drawable/custom_editext"
+                android:layout_below="@id/TIL_Descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
             <!--Precio-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/TIL_precio"
-                android:layout_below="@id/TIL_Descripcion"
+                android:layout_below="@id/categoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

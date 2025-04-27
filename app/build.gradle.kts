@@ -53,6 +53,8 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.imagePicker)/*Nos permite recortar una imagen*/
+    implementation(libs.glide)/*Nos permite leer una imagenes*/
+    implementation(libs.storage)/*Nos permite subir archivos multimedia*/
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
