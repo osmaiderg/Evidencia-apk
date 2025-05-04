@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "333886985579",
-    "project_id": "tienda-app-4dbe8",
-    "storage_bucket": "tienda-app-4dbe8.firebasestorage.app"
+    "project_number": "381450055711",
+    "project_id": "tienda-app-69cf4",
+    "storage_bucket": "tienda-app-69cf4.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:333886985579:android:f41428cb706348afdf682e",
+        "mobilesdk_app_id": "1:381450055711:android:819febbada29bfa6afe52a",
         "android_client_info": {
           "package_name": "com.evidencia.tiendaapp"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDecA97M9R-_8BftsY48Lwj4lNvfJPD8ko"
+          "current_key": "AIzaSyCv_V3v3OB1UXOwPn7WynQy5FiWR1n7XvY"
         }
       ],
       "services": {

@@ -25,6 +25,7 @@ class FragmentInicioCliente : Fragment() {
                 R.id.op_tienda_c->{
                    replaceFragment(FragmentTiendaCliente())
                 }
+
                 R.id.op_mis_pedidos_c->{
                    replaceFragment(FragmentMisPedidosCliente())
                 }

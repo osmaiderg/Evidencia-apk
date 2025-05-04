@@ -27,6 +27,7 @@
     <!-- Botton navigation Bar cliente -->
     <string name="op_tienda_c">Tienda</string>
     <string name="op_mis_pedidos_c">Mis Pedidos</string>
+    <string name="op_favoritos_c">Favoritos</string>
 
 
     <string name="txt_bienvenida">Bienvenido</string>
@@ -35,13 +36,15 @@
     <string name="txtRegistroV">Registro Vendedor</string>
     <string name="edtxtNombresV">Nombres completos</string>
     <string name="edtxtEmail">Email</string>
+    <string name="edtxtTelefono">Email</string>
     <string name="edtxtPassword">Password</string>
     <string name="edtxtCPassword">Confirmar password</string>
     <string name="btnRegistrarV">Registrarme</string>
 
     <!-- Registro de clientes -->
-    <string name="txtRegistroC">Registro Cciente</string>
+    <string name="txtRegistroC">Registro Cliente</string>
     <string name="edtxtNombresC">Nombres completos</string>
+    <string name="edtxtTelefonoC">Telefono</string>
     <string name="btnRegistrarC">Registrarme</string>
 
 
@@ -67,9 +70,39 @@
     <string name="edtxtNotaDescuentoP">Ejm: 10% Desc.</string>
     <string name="btnAgregarProducto">Agregar producto</string>
 
-    <!-- Productos -->
+    <!-- Agregar categorias -->
     <string name="txtCategoria">Ingrese categoria</string>
     <string name="btnAgregarCat">Agregar categoria </string>
+
+    <!-- item categorias - v -->
+    <string name="item_nombre_c_v">Nombres de categoria</string>
+
+    <!--Item categoria - c-->
+    <string name="item_nombre_c_c">Nombre de categoria</string>
+    <string name="item_ver_productos">Ver productos</string>
+
+    <!--Item  producto-v-->
+    <string name="item_nombre_p">Nombre del producto</string>
+    <string name="item_categoria_p">Categoría</string>
+    <string name="item_nota_p">50% OFF</string>
+    <string name="item_precio_p">00</string>
+    <string name="item_precio_p_desc">00</string>
+
+    <string name="bienvenidaTXT">Bienvenido(a)</string>
+    <string name="direccionTXT">Mi direccion</string>
+    <string name="txtCategorias"></string>
+
+    <!--Perfil del cliente-->
+    <string name="txtMiPerfil">Mi perfil</string>
+    <string name="nombresCPerfil">Nombres completos</string>
+    <string name="emailCPerfil">Email</string>
+    <string name="dniCPerfil">Dni</string>
+    <string name="telefonoCPerfil">Teléfono</string>
+    <string name="ubicacion">Ubicación</string>
+    <string name="fechaRegistroCPerfil">Fecha de registro</string>
+    <string name="proveedorCPerfil">Proveedor</string>
+    <string name="btnGuardarInfoC">Guardar</string>
+    <string name="btnActualizarContraseña">Cambiar contraseña</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

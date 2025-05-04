@@ -64,6 +64,22 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!--Telefono-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtxtTelefonoC"
+                android:hint="@string/edtxtTelefonoC"
+                android:drawableStart="@drawable/ico_telefono"
+                android:drawablePadding="5dp"
+                android:inputType="textPersonName|textCapWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <!--Password-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

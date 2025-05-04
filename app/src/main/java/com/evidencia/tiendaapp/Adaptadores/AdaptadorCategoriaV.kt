@@ -1,22 +1,14 @@
 package com.dinocode.tiendavirtualapp_kotlin.Adaptadores
 
-import android.app.Dialog
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.dinocode.tiendavirtualapp_kotlin.Modelos.ModeloCategoria
-import com.dinocode.tiendavirtualapp_kotlin.R
-import com.dinocode.tiendavirtualapp_kotlin.Vendedor.Productos.ProductosCatVActivity
-import com.dinocode.tiendavirtualapp_kotlin.databinding.ItemCategoriaVBinding
-import com.google.android.material.button.MaterialButton
+import com.evidencia.tiendaapp.Modelos.ModeloCategoria
+import com.evidencia.tiendaapp.databinding.ItemCategoriaVBinding
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 
@@ -46,24 +38,16 @@ class AdaptadorCategoriaV : RecyclerView.Adapter<AdaptadorCategoriaV.HolderCateg
 
         val id = modelo.id
         val categoria = modelo.categoria
-        val imagen = modelo.imagenUrl
+        //val imagen = modelo.imagenUrl
 
         holder.item_nombre_c_v.text = categoria
 
-        Glide.with(mContext)
-            .load(imagen)
-            .placeholder(R.drawable.categorias)
-            .into(holder.item_img_c_v)
-
-        holder.item_act_categ_c_v.setOnClickListener {
-            actualizarNomCat(id)
-        }
 
         holder.item_eliminar_c.setOnClickListener {
             //Toast.makeText(mContext, "Eliminar categoria",Toast.LENGTH_SHORT).show()
             val builder = AlertDialog.Builder(mContext)
             builder.setTitle("Eliminar categoria")
-            builder.setMessage("¿Estás seguro(a) de eliminar esta categoría?")
+            builder.setMessage("¿Estás seguro de eliminar esta categoría?")
                 .setPositiveButton("Confirmar"){a,d->
                     eliminarCategoria(modelo, holder)
                 }
@@ -73,12 +57,6 @@ class AdaptadorCategoriaV : RecyclerView.Adapter<AdaptadorCategoriaV.HolderCateg
             builder.show()
         }
 
-        holder.item_ver_productos.setOnClickListener {
-            val intent = Intent(mContext , ProductosCatVActivity::class.java)
-            intent.putExtra("nombreCat", categoria)
-            Toast.makeText(mContext, "Categoría seleccionada ${categoria}",Toast.LENGTH_SHORT).show()
-            mContext.startActivity(intent)
-        }
     }
 
     private fun eliminarCategoria(modelo: ModeloCategoria, holder: AdaptadorCategoriaV.HolderCategoriaV) {
@@ -107,58 +85,11 @@ class AdaptadorCategoriaV : RecyclerView.Adapter<AdaptadorCategoriaV.HolderCateg
             }
     }
 
-    private fun actualizarNomCat(id : String){
-        val etNuevoNomCat : EditText
-        val btnActualizarNomCat : MaterialButton
-        val ibCerrar : ImageButton
-
-        val dialog = Dialog(mContext)
-
-        dialog.setContentView(R.layout.dialog_act_nom_cat)
-
-        etNuevoNomCat = dialog.findViewById(R.id.etNuevoNomCat)
-        btnActualizarNomCat = dialog.findViewById(R.id.btnActualizarNomCat)
-        ibCerrar = dialog.findViewById(R.id.ibCerrar)
-
-        btnActualizarNomCat.setOnClickListener {
-            var nuevoNombre = etNuevoNomCat.text.toString().trim()
-            if (nuevoNombre.isNotEmpty()){
-                actualizarNomCatBD(id , nuevoNombre)
-                dialog.dismiss()
-            }else{
-                Toast.makeText(mContext, "Ingrese un nombre",Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        ibCerrar.setOnClickListener {
-            dialog.dismiss()
-        }
-
-        dialog.show()
-        dialog.setCanceledOnTouchOutside(false)
-    }
-
-    private fun actualizarNomCatBD(idCat: String , nuevoNombre : String){
-        val hashMap = HashMap<String , Any>()
-        hashMap["categoria"] = nuevoNombre
-
-        val ref = FirebaseDatabase.getInstance().getReference("Categorias").child(idCat)
-        ref.updateChildren(hashMap)
-            .addOnSuccessListener {
-                Toast.makeText(mContext, "Nombre actualizado",Toast.LENGTH_SHORT).show()
-            }
-            .addOnFailureListener {e->
-                Toast.makeText(mContext, "Ha ocurrido un error debido a:  ${e.message}",Toast.LENGTH_SHORT).show()
-
-            }
-    }
 
     inner class HolderCategoriaV(itemView : View) : RecyclerView.ViewHolder(itemView){
         var item_nombre_c_v = binding.itemNombreCV
-        var item_act_categ_c_v = binding.itemActualizarCat
         var item_eliminar_c = binding.itemEliminarC
-        var item_img_c_v = binding.imagenCategCV
-        var item_ver_productos = binding.itemVerProductos
+
     }
 
 }
